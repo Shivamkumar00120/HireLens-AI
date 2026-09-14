@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 
+
 const technicalQuestionSchema = new mongoose.Schema({
     question: {
         type: String,
@@ -90,8 +91,7 @@ const interviewReportSchema = new mongoose.Schema({
     },
     title: {
         type: String,
-        default:"Untitled",
-        required: [false, "Job title is required"]
+        required: [true, "Job title is required"]
     }
 }, {
     timestamps: true
